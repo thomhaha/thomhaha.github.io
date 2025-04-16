@@ -1,6 +1,6 @@
 /* ----------------------
    Base & Reset
-   ---------------------- */
+---------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,7 +17,7 @@ body {
 
 /* ----------------------
    Header & Navigation
-   ---------------------- */
+---------------------- */
 header {
   background: #000;
   padding: 1rem 0;
@@ -38,7 +38,6 @@ nav a {
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
-
 nav a:hover {
   color: #fff;
 }
@@ -52,7 +51,7 @@ nav a.active {
 
 /* ----------------------
    Main Container
-   ---------------------- */
+---------------------- */
 main {
   max-width: 1000px;
   margin: 0 auto;
@@ -61,7 +60,7 @@ main {
 
 /* ----------------------
    Hero Video Banner
-   ---------------------- */
+---------------------- */
 .hero-video {
   position: relative;
   width: 100%;
@@ -77,10 +76,8 @@ main {
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,17 +87,14 @@ main {
   color: #fff;
   padding: 1rem;
 }
-
 .hero-overlay h1 {
   font-size: 4rem;
   margin-bottom: 0.5rem;
 }
-
 .hero-overlay p {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
-
 .cta-btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -112,20 +106,18 @@ main {
   transition: background 0.3s ease;
   margin: 0.5rem 0;
 }
-
 .cta-btn:hover {
   background: #eee;
 }
 
 /* ----------------------
    Fade‑In Animation
-   ---------------------- */
+---------------------- */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
-
 .fade-in.in-view {
   opacity: 1;
   transform: translateY(0);
@@ -133,7 +125,7 @@ main {
 
 /* ----------------------
    About + Showreel
-   ---------------------- */
+---------------------- */
 .about-wrapper {
   display: flex;
   gap: 2rem;
@@ -141,12 +133,10 @@ main {
   flex-wrap: wrap;
   margin-bottom: 3rem;
 }
-
 .video-side {
   flex: 1 1 40%;
   max-width: 400px;
 }
-
 .video-side .showreel,
 .showreel {
   width: 100%;
@@ -156,46 +146,40 @@ main {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   display: block;
 }
-
 .text-side {
   flex: 1 1 55%;
 }
 
 /* ----------------------
    Discography
-   ---------------------- */
+---------------------- */
 .filter-controls {
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-
 .releases-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
-
 .release-card {
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   text-align: center;
 }
-
 .release-cover {
   width: 100%;
   height: auto;
   border-radius: 4px;
   margin-bottom: 0.5rem;
 }
-
 .release-card h3 {
   font-size: 1.25rem;
   margin: 0.5rem 0;
 }
-
 .release-card p {
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
@@ -203,11 +187,10 @@ main {
 
 /* ----------------------
    Audio for Visual
-   ---------------------- */
+---------------------- */
 .video-block {
   margin-bottom: 2rem;
 }
-
 .video-block iframe {
   width: 100%;
   max-width: 800px;
@@ -216,40 +199,34 @@ main {
   display: block;
   margin-bottom: 0.5rem;
 }
-
 .video-block h3 {
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
 }
-
 .video-block p {
   font-size: 1rem;
 }
 
 /* ----------------------
    Education
-   ---------------------- */
+---------------------- */
 .skills-list {
   list-style: disc inside;
   margin: 1rem 0;
 }
-
 .pdf-previews {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 1rem;
 }
-
 .pdf-item {
   flex: 1 1 45%;
 }
-
 .pdf-item h3 {
   font-size: 1.1rem;
   margin-bottom: 0.3rem;
 }
-
 .pdf-item embed {
   width: 100%;
   height: 200px;
@@ -259,21 +236,20 @@ main {
 
 /* ----------------------
    Contact
-   ---------------------- */
+---------------------- */
 .contact a {
   display: inline-block;
   margin: 0.5rem 0;
   font-size: 1rem;
   text-decoration: none;
 }
-
 .contact i {
   margin-right: 0.5rem;
 }
 
 /* ----------------------
    Footer
-   ---------------------- */
+---------------------- */
 footer {
   text-align: center;
   padding: 1rem;
@@ -285,29 +261,24 @@ footer {
 
 /* ----------------------
    Responsive Adjustments
-   ---------------------- */
+---------------------- */
 @media (max-width: 768px) {
   .about-wrapper {
     flex-direction: column;
   }
-
   nav ul {
     flex-direction: column;
     gap: 1rem;
   }
-
   body {
     font-size: 1.1rem;
   }
-
   .hero-overlay h1 {
     font-size: 3rem;
   }
-
   .hero-overlay p {
     font-size: 1.2rem;
   }
-
   .hero-video {
     height: 60vh;
   }
