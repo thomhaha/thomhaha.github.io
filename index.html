@@ -1,10 +1,25 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thom Haha</title>
+
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Thom Haha — New Zealand‑born musician & audio producer based in Paris. Portfolio, discography, audio for visual work, and contact.">
+  <meta property="og:title" content="Thom Haha">
+  <meta property="og:description" content="Listen to my latest releases, view my audio‑for‑visual showreel, and explore my discography.">
+  <meta property="og:image" content="https://thomhaha.github.io/thomhaha.png">
+  <meta property="og:url" content="https://thomhaha.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Thom Haha">
+  <meta name="twitter:description" content="Audio producer & musician based in Paris.">
+  <meta name="twitter:image" content="https://thomhaha.github.io/thomhaha.png">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="thomhaha.png">
 </head>
@@ -21,22 +36,66 @@
       </ul>
     </nav>
   </header>
+
   <main>
-    <section class="bio">
-      <div class="showreel-container">
-  <video class="showreel" autoplay muted loop playsinline controls preload="auto">
-    <source src="showreel.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
-      <h2>About Thom</h2>
-      <p>Thom Haha is a New Zealand-born musician and audio producer based in Paris. With tens of millions of streams to his name and a background in audio production, he blends intimate textures with expansive soundscapes. His work spans solo projects, collaborations, and sound for visual media.</p>
-      <h3>Latest Release</h3>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/YzKTnAIGqvg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- Full‑Width Hero Banner -->
+    <section class="hero-video fade-in">
+      <video autoplay muted loop playsinline preload="auto">
+        <source src="showreel.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay">
+        <h1>Thom Haha</h1>
+        <p>Audio Producer & Musician</p>
+        <a href="#about" class="cta-btn">Explore My Work</a>
+      </div>
+    </section>
+
+    <!-- About + Showreel -->
+    <section id="about" class="about-wrapper fade-in">
+      <div class="video-side">
+        <video class="showreel" autoplay muted loop playsinline controls preload="auto">
+          <source src="showreel.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="text-side">
+        <h2>About Thom</h2>
+        <p>Thom Haha is a New Zealand‑born musician and audio producer based in Paris. With tens of millions of streams to his name and a background in audio production, he blends intimate textures with expansive soundscapes. His work spans solo projects, collaborations, and sound for visual media.</p>
+        <h3>Latest Release</h3>
+        <iframe width="100%" height="315"
+          src="https://www.youtube.com/embed/YzKTnAIGqvg"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Thom Haha</p>
   </footer>
+
+  <!-- Active‑link Highlight -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("nav a").forEach(link => {
+        if (link.href === window.location.href) link.classList.add("active");
+      });
+    });
+  </script>
+
+  <!-- Fade‑in on Scroll -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const faders = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          e.target.classList.add('in-view');
+          obs.unobserve(e.target);
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      faders.forEach(el => observer.observe(el));
+    });
+  </script>
 </body>
 </html>
