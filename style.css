@@ -89,6 +89,39 @@ h2 {
   margin-top: 20px; /* Adds space before the divider */
 }
 
+/* ✅ Added: Contained showreel styling */
+.showreel-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.showreel {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border: none;
+}
+
+/* ✅ Added: Full-width hero video styling */
+.hero-video {
+  width: 100%;
+  height: 60vh; /* or 100vh for fullscreen */
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Footer styling */
 footer {
   text-align: center;
@@ -115,5 +148,9 @@ footer {
 
   body {
     font-size: 1.1rem;
+  }
+
+  .hero-video {
+    height: 40vh; /* Make hero video smaller on mobile */
   }
 }
