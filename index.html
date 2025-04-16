@@ -17,9 +17,6 @@
   <meta name="twitter:description" content="Audio producer & musician based in Paris.">
   <meta name="twitter:image" content="https://thomhaha.github.io/thomhaha.png">
 
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="thomhaha.png">
 </head>
@@ -38,10 +35,11 @@
   </header>
 
   <main>
-    <!-- Full‑Width Hero Banner -->
+    <!-- ▶️ Hero Banner Video now manual-play ▶️ -->
     <section class="hero-video fade-in">
-      <video autoplay muted loop playsinline preload="auto">
+      <video id="heroVideo" controls loop playsinline preload="auto">
         <source src="showreel.mp4" type="video/mp4">
+        Your browser doesn’t support the video tag.
       </video>
       <div class="hero-overlay">
         <h1>Thom Haha</h1>
@@ -55,6 +53,7 @@
       <div class="video-side">
         <video class="showreel" autoplay muted loop playsinline controls preload="auto">
           <source src="showreel.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
       <div class="text-side">
@@ -74,27 +73,25 @@
     <p>&copy; 2025 Thom Haha</p>
   </footer>
 
-  <!-- Active‑link Highlight -->
+  <!-- Active‑link Highlight & Fade‑in Script (unchanged) -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      // Highlight current nav link
       document.querySelectorAll("nav a").forEach(link => {
         if (link.href === window.location.href) link.classList.add("active");
       });
-    });
-  </script>
-
-  <!-- Fade‑in on Scroll -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const faders = document.querySelectorAll('.fade-in');
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(e => {
-          if (!e.isIntersecting) return;
-          e.target.classList.add('in-view');
-          obs.unobserve(e.target);
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      faders.forEach(el => observer.observe(el));
+      // Fade‑in on scroll
+      document.querySelectorAll('.fade-in').forEach(el => {
+        new IntersectionObserver((entries, obs) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('in-view');
+              obs.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' })
+        .observe(el);
+      });
     });
   </script>
 </body>
