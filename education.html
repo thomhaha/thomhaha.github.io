@@ -1,16 +1,27 @@
-<!-- education.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Education | Thom Haha</title>
+
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Thom Haha’s education: Diploma in Audio Production, skills, transcripts, and résumé.">
+  <meta property="og:title" content="Thom Haha – Education">
+  <meta property="og:description" content="Diploma in Audio Production, skills, transcripts, and résumé.">
+  <meta property="og:image" content="https://thomhaha.github.io/thomhaha.png">
+  <meta property="og:url" content="https://thomhaha.github.io/education.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Thom Haha – Education">
+  <meta name="twitter:description" content="Diploma in Audio Production, skills, transcripts, and résumé.">
+  <meta name="twitter:image" content="https://thomhaha.github.io/thomhaha.png">
+
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="thomhaha.png">
 </head>
 <body>
   <header>
-     <h1 style="color: white;">Thom Haha</h1>
+    <h1 style="color: white;">Thom Haha</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -21,17 +32,66 @@
       </ul>
     </nav>
   </header>
+
   <main>
-    <section class="bio">
+    <section class="education fade-in">
       <h2>Education</h2>
+
       <p>Diploma in Audio Production – SAE Institute, Auckland</p>
       <p>Graduated with a focus on sound design, mixing, and mastering. Additional experience includes collaborative studio sessions and live engineering.</p>
-<a href="../pdfs/academic-transcript-thomas-williams.pdf" target="_blank">Academic Transcript (PDF)</a><br><br>
-<a href="../pdfs/audio-project-report.pdf" target="_blank">Audio Project Report (PDF)</a>
+
+      <!-- Skills List -->
+      <ul class="skills-list">
+        <li>Pro Tools</li>
+        <li>Ableton Live</li>
+        <li>Logic Pro X</li>
+        <li>Field Recording (Zoom H6)</li>
+        <li>Mixing & Mastering</li>
+      </ul>
+
+      <!-- PDF Previews -->
+      <div class="pdf-previews">
+        <div class="pdf-item">
+          <h3>Academic Transcript</h3>
+          <a href="../pdfs/academic-transcript-thomas-williams.pdf" target="_blank">View Full PDF</a>
+          <embed src="../pdfs/academic-transcript-thomas-williams.pdf#page=1&view=fit"
+                 type="application/pdf" width="100%" height="200px" />
+        </div>
+        <div class="pdf-item">
+          <h3>Audio Project Report</h3>
+          <a href="../pdfs/audio-project-report.pdf" target="_blank">View Full PDF</a>
+          <embed src="../pdfs/audio-project-report.pdf#page=1&view=fit"
+                 type="application/pdf" width="100%" height="200px" />
+        </div>
+      </div>
+
+      <!-- Résumé Download -->
+      <a href="resume.pdf" class="cta-btn">Download Résumé</a>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Thom Haha</p>
   </footer>
+
+  <!-- Active‑link & Fade‑in Scripts (same as above) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("nav a").forEach(link => {
+        if (link.href === window.location.href) link.classList.add("active");
+      });
+      document.querySelectorAll('.fade-in').forEach(el => {
+        new IntersectionObserver((entries, obs) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('in-view');
+              obs.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' })
+        .observe(el);
+      });
+    });
+  </script>
 </body>
 </html>
