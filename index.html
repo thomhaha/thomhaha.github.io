@@ -3,116 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thom Haha | Music & Audio Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;500;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #0a0a0a;
-      --primary: #d7bce8;
-      --accent: #8fd3f4;
-      --text: #eaeaea;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Lexend', sans-serif;
-      background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
-      color: var(--text);
-    }
-    header {
-      padding: 4rem 2rem;
-      text-align: center;
-      background: radial-gradient(circle at top, #2a2a2a, transparent);
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      color: var(--primary);
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 2rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    h2 {
-      color: var(--accent);
-      font-weight: 500;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid #444;
-      padding-bottom: 0.5rem;
-    }
-    .player iframe {
-      width: 100%;
-      height: 166px;
-      border-radius: 12px;
-      border: none;
-    }
-    .socials a {
-      margin-right: 15px;
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 500;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-    .image-banner {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-      opacity: 0.85;
-    }
-  </style>
+  <title>Thom Haha | Music Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
-    <h1>Thom Haha</h1>
-    <p>Atmospheric Production & Dreamy Audio Vibes</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discography.html">Discography</a></li>
+        <li><a href="visual.html">Audio for Visual</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <img src="https://i.scdn.co/image/ab6761610000e5eb6c91c84b2d12358b7f3b1f95" alt="Album Art" class="image-banner" />
+    <section class="hero">
+      <h1>Thom Haha</h1>
+      <p>Atmospheric soundscapes and audio production based in Paris.</p>
+    </section>
 
-    <section>
+    <section class="bio">
+      <h2>About Me</h2>
+      <p>Thom Haha is a producer and audio artist from New Zealand, now based in Paris. With a diploma in audio production and tens of millions of streams, his work blends dreamlike textures and grounded emotion across solo releases and collaborative projects.</p>
+    </section>
+
+    <section class="latest-release">
       <h2>Latest Release</h2>
-      <div class="player">
-        <iframe src="https://open.spotify.com/embed/artist/2gHMoGVtXhBGWG9D8By84R" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
-    </section>
-
-    <section>
-      <h2>About</h2>
-      <p>Thom Haha is a producer and audio artist crafting immersive, genre-defying soundscapes. Born in New Zealand, now based in Paris, his music blends introspection with lush textures, often dancing between dream pop, ambient, and lo-fi rhythms. With tens of millions of streams across platforms, his work has found a global audience—and continues to evolve.</p>
-    </section>
-
-    <section>
-      <h2>Connect</h2>
-      <div class="socials">
-        <a href="https://instagram.com/YOURUSERNAME" target="_blank">Instagram</a>
-        <a href="https://soundcloud.com/YOURUSERNAME" target="_blank">SoundCloud</a>
-        <a href="mailto:your@email.com">Email</a>
+      <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YzKTnAIGqvg" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
       </div>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 Thom Haha. All rights reserved.
+    <p>&copy; 2025 Thom Haha</p>
   </footer>
-
 </body>
 </html>
