@@ -1,10 +1,21 @@
-<!-- visual.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Audio for Visual | Thom Haha</title>
+
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Audio-for-visual showreels: embedded projects and soundtracks.">
+  <meta property="og:title" content="Thom Haha – Audio for Visual">
+  <meta property="og:description" content="Listen to showreel projects scored and recorded by Thom Haha.">
+  <meta property="og:image" content="https://thomhaha.github.io/thomhaha.png">
+  <meta property="og:url" content="https://thomhaha.github.io/visual.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Thom Haha – Audio for Visual">
+  <meta name="twitter:description" content="Listen to showreel projects scored and recorded by Thom Haha.">
+  <meta name="twitter:image" content="https://thomhaha.github.io/thomhaha.png">
+
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="thomhaha.png">
 </head>
@@ -21,25 +32,53 @@
       </ul>
     </nav>
   </header>
+
   <main>
-    <section class="bio">
+    <section class="bio fade-in">
       <h2>Audio for Visual Work</h2>
 
       <div class="video-block">
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/vRvIL-83oPo" allowfullscreen></iframe>
+        <iframe width="800" height="450"
+          src="https://www.youtube.com/embed/vRvIL-83oPo"
+          allowfullscreen>
+        </iframe>
         <h3>Soundtrack For Visual Art Project</h3>
-        <p>I created a 9 minute soundtrack for the video, “Constantly Falling is Floating” by Elijah Broughton.</p>
+        <p>I created a 9‑minute soundtrack for the video, “Constantly Falling is Floating” by Elijah Broughton.</p>
       </div>
 
       <div class="video-block">
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/z-tdqJFbhNU" allowfullscreen></iframe>
+        <iframe width="800" height="450"
+          src="https://www.youtube.com/embed/z-tdqJFbhNU"
+          allowfullscreen>
+        </iframe>
         <h3>Soundtrack & Audio Recordist for 48 Hour Film Festival Project</h3>
-        <p>I created the soundtrack for a 48 Hour Film Festival project. Also, I captured the location sound and dialogue.</p>
+        <p>I created the soundtrack for a 48‑Hour Film Festival project. Also, I captured the location sound and dialogue.</p>
       </div>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Thom Haha</p>
   </footer>
+
+  <!-- Active‑link & Fade‑in Scripts -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("nav a").forEach(link => {
+        if (link.href === window.location.href) link.classList.add("active");
+      });
+      document.querySelectorAll('.fade-in').forEach(el => {
+        new IntersectionObserver((entries, obs) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('in-view');
+              obs.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' })
+        .observe(el);
+      });
+    });
+  </script>
 </body>
 </html>
