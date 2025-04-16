@@ -1,4 +1,4 @@
-/* Existing body styles */
+/* Base body styling */
 body {
   margin: 0;
   font-family: 'Times New Roman', serif;
@@ -8,7 +8,7 @@ body {
   font-size: 1.25rem;
 }
 
-/* Header styles */
+/* Header styling */
 header {
   background: #000;
   padding: 1rem 0;
@@ -36,13 +36,14 @@ nav a:hover {
   color: #fff;
 }
 
-/* Main content styling */
+/* Main layout */
 main {
   padding: 2rem;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
+/* Hero styles */
 .hero {
   text-align: center;
   margin-bottom: 3rem;
@@ -60,10 +61,7 @@ main {
   color: #bbb;
 }
 
-.bio, .latest-release {
-  margin-bottom: 2rem;
-}
-
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
@@ -75,54 +73,47 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* Video Block Styling */
-.video-block {
-  margin-bottom: 30px; /* Adds spacing below each video block */
+/* Side-by-side layout */
+.about-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-/* Divider after each video block */
-.video-block::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: #ccc; /* Color of the divider */
-  margin-top: 20px; /* Adds space before the divider */
+.video-side {
+  flex: 1 1 40%;
+  max-width: 400px;
 }
 
-/* ✅ Added: Contained showreel styling */
-.showreel-container {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto 2rem auto;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+.text-side {
+  flex: 1 1 55%;
 }
 
+/* Video styling */
 .showreel {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
-  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* ✅ Added: Full-width hero video styling */
-.hero-video {
-  width: 100%;
-  height: 60vh; /* or 100vh for fullscreen */
-  overflow: hidden;
-  position: relative;
+/* Divider video block (if reused later) */
+.video-block {
+  margin-bottom: 30px;
 }
 
-.hero-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.video-block::after {
+  content: "";
   display: block;
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 20px;
 }
 
-/* Footer styling */
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
@@ -131,26 +122,32 @@ footer {
   border-top: 1px solid #444;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 600px) {
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .video-side,
+  .text-side {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
   nav ul {
     flex-direction: column;
     gap: 1rem;
-  }
-
-  .hero h1 {
-    font-size: 2.8rem;
   }
 
   nav a {
     font-size: 1rem;
   }
 
-  body {
-    font-size: 1.1rem;
+  .hero h1 {
+    font-size: 2.8rem;
   }
 
-  .hero-video {
-    height: 40vh; /* Make hero video smaller on mobile */
+  body {
+    font-size: 1.1rem;
   }
 }
