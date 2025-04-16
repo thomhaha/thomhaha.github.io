@@ -101,8 +101,3 @@ footer {
     font-size: 2.2rem;
   }
 }
-
-/* Fix for <strong> text visibility on dark background */
-strong {
-  color: #fff;
-}
