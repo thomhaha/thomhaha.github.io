@@ -28,27 +28,6 @@ a:hover {
 }
 
 /* ----------------------
-   Streaming / Icon Links
----------------------- */
-.streaming-links {
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;        /* nice spacing between icons */
-  margin: 3rem 0;     /* space above/below the row */
-}
-
-.streaming-links a {
-  text-decoration: none;  /* remove underlines */
-  color: inherit;         /* keep icon color consistent */
-  font-size: 2rem;        /* increase icon size */
-  transition: transform 0.2s ease;
-}
-
-.streaming-links a:hover {
-  transform: scale(1.2);
-}
-
-/* ----------------------
    Header & Navigation
 ---------------------- */
 header {
