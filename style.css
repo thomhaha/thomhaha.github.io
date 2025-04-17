@@ -184,6 +184,28 @@ main {
 /* ----------------------
    Discography
 ---------------------- */
+/* ----------------------
+   Platform Links (Discography icons)
+---------------------- */
+.platform-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;        /* space between each icon/link */
+  margin-top: 1rem;   /* separate from the embedded player */
+}
+
+.platform-links a {
+  text-decoration: none;  /* remove underline */
+  color: inherit;         /* inherit text/icon color */
+  font-size: 1.5rem;      /* size of your Font Awesome icon */
+  transition: transform 0.2s ease;
+}
+
+.platform-links a:hover {
+  transform: scale(1.1);
+}
+
 .filter-controls {
   margin-bottom: 1rem;
   display: flex;
