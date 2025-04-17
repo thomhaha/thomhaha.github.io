@@ -129,50 +129,45 @@ main {
 .about-wrapper {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 4rem;
-  max-width: 1200px;
-  margin: 6rem auto;
+  justify-content: center;
+  gap: 6rem;
+  max-width: 1600px;
+  margin: 8rem auto;
   padding: 0 2rem;
-  flex-wrap: wrap;
 }
 
 .video-side {
-  flex: 1 1 50%;
-  max-width: 600px;
+  flex: 0 0 55%;
   position: sticky;
-  top: 6rem;
-  align-self: flex-start;
+  top: 5rem;
 }
 
 .showreel {
   width: 100%;
+  max-width: 1000px;
   height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 16px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
   display: block;
 }
 
 .text-side {
-  flex: 1 1 45%;
-  font-size: 1.2rem;
-  line-height: 1.8;
+  flex: 0 0 35%;
+  max-width: 450px;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  padding-top: 1rem;
 }
 
 .text-side h2 {
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .text-side p {
-  margin-bottom: 1.2rem;
-}
-
-.latest-release {
-  margin-top: 6rem;
-  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 /* ----------------------
