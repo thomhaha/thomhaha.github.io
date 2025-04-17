@@ -241,7 +241,7 @@ main {
    Discography: Spotify embed height fix
 ---------------------- */
 .release-card iframe {
-  height: 90px !important;
+  height: 100px !important;
 }
 
 /* ----------------------
