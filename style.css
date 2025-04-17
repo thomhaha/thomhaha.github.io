@@ -128,19 +128,18 @@ main {
 ---------------------- */
 .about-wrapper {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  gap: 4rem;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 6rem auto;
   padding: 0 2rem;
   flex-wrap: wrap;
 }
 
 .video-side {
   flex: 1 1 50%;
+  max-width: 500px;
 }
 
 .video-side .showreel,
@@ -148,18 +147,29 @@ main {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   display: block;
   aspect-ratio: 16 / 9;
 }
 
 .text-side {
-  flex: 1 1 50%;
+  flex: 1 1 45%;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.text-side h2 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.text-side p {
+  margin-bottom: 1.2rem;
 }
 
 .latest-release {
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 /* ----------------------
