@@ -14,6 +14,18 @@ body {
   line-height: 1.6;
   font-size: 1.25rem;
 }
+a {
+  color: #0077ff; /* Set your desired link color */
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #0077ff; /* Keep visited links the same color */
+}
+
+a:hover {
+  color: #005fcc; /* Optional: slight color change on hover */
+}
 
 /* ----------------------
    Header & Navigation
