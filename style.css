@@ -149,6 +149,9 @@ main {
 .text-side {
   flex: 1 1 55%;
 }
+.latest-release {
+  margin-top: 4rem;
+}
 
 /* ----------------------
    Discography
