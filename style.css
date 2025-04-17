@@ -237,12 +237,6 @@ main {
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
-/* ----------------------
-   Discography: Spotify embed height fix
----------------------- */
-.release-card iframe {
-  height: 100px !important;
-}
 
 /* ----------------------
    Audio for Visual
@@ -343,3 +337,9 @@ footer {
     height: 60vh;
   }
 }
+
+/* Force full Spotify embed height */
+iframe[src*="open.spotify.com/embed"] {
+  height: 95px !important;
+}
+
