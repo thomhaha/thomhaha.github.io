@@ -336,15 +336,16 @@ footer {
   .hero-video {
     height: 60vh;
   }
+   
+/* —— Spotify embed height overrides —— */
+/* Artist embeds (e.g. Ngahere Wafer, Thom Haha solo) */
+iframe[src*="/embed/artist"] {
+  height: 95px !important;
+  min-height: 95px !important;
 }
 
-/* Force full Spotify embed height */
-iframe[src*="open.spotify.com/embed"] {
-  height: 95px !important;
+/* Album embeds (e.g. Turn It Up) */
+iframe[src*="/embed/album"] {
+  height: 152px !important;
+  min-height: 152px !important;
 }
-/* Force full Spotify embed height inside discography cards */
-.discography .release-card iframe[src*="open.spotify.com/embed"] {
-  height: 95px !important;
-  max-height: none !important;
-}
-
