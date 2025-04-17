@@ -44,17 +44,16 @@ nav ul {
   list-style: none;
 }
 
-nav a {
+nav a,
+nav a:visited {
   color: #ccc;
   text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
 }
+
 nav a:hover {
   color: #fff;
 }
 
-/* Active link indicator */
 nav a.active {
   color: #fff;
   border-bottom: 2px solid #fff;
