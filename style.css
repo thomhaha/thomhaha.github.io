@@ -128,7 +128,7 @@ main {
 ---------------------- */
 .about-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 4rem;
   max-width: 1200px;
@@ -139,18 +139,20 @@ main {
 
 .video-side {
   flex: 1 1 50%;
-  max-width: 500px;
+  max-width: 600px;
+  position: sticky;
+  top: 6rem;
+  align-self: flex-start;
 }
 
-.video-side .showreel,
 .showreel {
   width: 100%;
   height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 16px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   display: block;
-  aspect-ratio: 16 / 9;
 }
 
 .text-side {
@@ -170,6 +172,7 @@ main {
 
 .latest-release {
   margin-top: 6rem;
+  text-align: center;
 }
 
 /* ----------------------
