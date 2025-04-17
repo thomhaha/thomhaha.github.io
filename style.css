@@ -132,7 +132,7 @@ main {
   justify-content: center;
   gap: 6rem;
   max-width: 1600px;
-  margin: 8rem auto;
+  margin: 3rem auto 8rem auto; /* reduced top margin from 8rem to 3rem */
   padding: 0 2rem;
 }
 
