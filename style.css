@@ -53,9 +53,9 @@ nav a.active {
    Main Container
 ---------------------- */
 main {
-  max-width: 1000px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 /* ----------------------
@@ -128,15 +128,21 @@ main {
 ---------------------- */
 .about-wrapper {
   display: flex;
-  gap: 2rem;
+  justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
+  gap: 2rem;
   margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
+  flex-wrap: wrap;
 }
+
 .video-side {
-  flex: 1 1 40%;
-  max-width: 400px;
+  flex: 1 1 50%;
 }
+
 .video-side .showreel,
 .showreel {
   width: 100%;
@@ -145,10 +151,13 @@ main {
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   display: block;
+  aspect-ratio: 16 / 9;
 }
+
 .text-side {
-  flex: 1 1 55%;
+  flex: 1 1 50%;
 }
+
 .latest-release {
   margin-top: 4rem;
 }
@@ -268,6 +277,7 @@ footer {
 @media (max-width: 768px) {
   .about-wrapper {
     flex-direction: column;
+    padding: 0 1rem;
   }
   nav ul {
     flex-direction: column;
