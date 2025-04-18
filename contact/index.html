@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Thom Haha</title>
 
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Get in touch with Thom Haha — email, social, press kit, and résumé.">
+  <meta property="og:title" content="Thom Haha – Contact">
+  <meta property="og:description" content="Email, social links, press kit, and résumé download.">
+  <meta property="og:image" content="https://thomhaha.github.io/thomhaha.png">
+  <meta property="og:url" content="https://thomhaha.github.io/contact.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Thom Haha – Contact">
+  <meta name="twitter:description" content="Email, social links, press kit, and résumé download.">
+  <meta name="twitter:image" content="https://thomhaha.github.io/thomhaha.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="thomhaha.png">
+</head>
+<body>
+  <header>
+    <h1 style="color: white;">Thom Haha</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="/discography/">Discography</a></li>
+        <li><a href="/visual/">Audio for Visual</a></li>
+        <li><a href="/education/">Education</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact fade-in">
+      <h2>Contact Me</h2>
+      <p><a href="mailto:thomhahaah@gmail.com"><i class="fas fa-envelope"></i> thomhahaah@gmail.com</a></p>
+      <p><a href="https://www.instagram.com/thom_haha/" target="_blank"><i class="fab fa-instagram"></i> @thom_haha</a></p>
+      <p><a href="https://soundcloud.com/thomhaha" target="_blank"><i class="fab fa-soundcloud"></i> soundcloud.com/thomhaha</a></p>
+
+  <footer>
+    <p>&copy; 2025 Thom Haha</p>
+  </footer>
+
+  <!-- Active‑link & Fade‑in Scripts -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("nav a").forEach(link => {
+        if (link.href === window.location.href) link.classList.add("active");
+      });
+      document.querySelectorAll('.fade-in').forEach(el => {
+        new IntersectionObserver((entries, obs) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('in-view');
+              obs.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' })
+        .observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
