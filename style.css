@@ -336,6 +336,9 @@ footer {
   .hero-video {
     height: 60vh;
   }
+   .video-side {
+    top: 1rem;
+  }
    
 /* —— Spotify embed height overrides —— */
 /* Artist embeds (e.g. Ngahere Wafer, Thom Haha solo) */
